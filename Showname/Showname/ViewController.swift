@@ -20,7 +20,7 @@ class ViewController: UIViewController ,UITableViewDelegate{
     @IBOutlet weak var show: UITableView!
     
     @IBAction func intputtable(sender: AnyObject) {
-        
+
     }
     
     

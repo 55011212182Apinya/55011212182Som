@@ -40,16 +40,17 @@ class ViewController: UIViewController,UITableViewDelegate {
         
         cell.textLabel!.text = "\(tipPct)%:"
         cell.detailTextLabel!.text = String(format:"Tip:$%0.2f,Total: $%0.2f",tipAmt,total)
+        
         return cell
         
     }
 
     @IBAction func calculateTapped(sender : AnyObject){
+       
+        tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
         
-       tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
-        
-        let possibleTips = tipCalc.returnPossibleTips()
-        var results = ""
+         possibleTips = tipCalc.returnPossibleTips()
+         var results = ""
         
         for (tipPct, tipValue) in possibleTips{
           
@@ -60,10 +61,12 @@ class ViewController: UIViewController,UITableViewDelegate {
     }
     @IBAction func taxPercentageChanged(sender : AnyObject){
         tipCalc.taxPct = Double(taxPctSlider.value)/100.0
-        refreshUI()    }
+        refreshUI()
+    }
+    
     @IBAction func viewTapped(sender : AnyObject){
         totalTextField.resignFirstResponder()
-    }
+        }
     
   func refreshUI() {
   
@@ -72,6 +75,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     taxPctSlider.value = Float(tipCalc.taxPct)*100.0
    
     taxPctLabel.text = "Tax Percentage(\(Int(taxPctSlider.value))%)"
+    
      tableview.reloadData()
     }
     
