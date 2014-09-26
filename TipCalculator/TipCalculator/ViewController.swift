@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     @IBOutlet var tableview: UITableView!
     
     
-    let tipCalc = TipCalculatorModel(total: 33.25,taxPct:0.06)
+    let tipCalc = TipCalculatorModel(total: 33.25,taxPct:0.01)
     var possibleTips = Dictionary<Int,(TipAmt:Double,total:Double)>()
     var sortedKeys:[Int]=[]
     
@@ -54,9 +54,9 @@ class ViewController: UIViewController,UITableViewDelegate {
         for (tipPct, tipValue) in possibleTips{
           
             results += "\(tipPct)%: \(tipValue)\n"
+        
         }
-        
-        
+          tableview.reloadData()
     }
     @IBAction func taxPercentageChanged(sender : AnyObject){
         tipCalc.taxPct = Double(taxPctSlider.value)/100.0
@@ -72,6 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     taxPctSlider.value = Float(tipCalc.taxPct)*100.0
    
     taxPctLabel.text = "Tax Percentage(\(Int(taxPctSlider.value))%)"
+     tableview.reloadData()
     }
     
     
@@ -79,14 +80,12 @@ class ViewController: UIViewController,UITableViewDelegate {
     super.viewDidLoad()
             
             refreshUI()
-            
-    // Do any additional setup after loading the view, typically from a nib.
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+            }
 
 
 }
