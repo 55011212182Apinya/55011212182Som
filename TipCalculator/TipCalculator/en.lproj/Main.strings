@@ -1,0 +1,12 @@
+
+/* Class = "IBUIButton"; normalTitle = "Calculate"; ObjectID = "35Q-TK-aCF"; */
+"35Q-TK-aCF.normalTitle" = "Calculate";
+
+/* Class = "IBUILabel"; text = "Tax Percentege(0%)"; ObjectID = "Rrd-Q2-YdH"; */
+"Rrd-Q2-YdH.text" = "Tax Percentege(0%)";
+
+/* Class = "IBUINavigationItem"; title = "Calculeter"; ObjectID = "aBy-QB-obg"; */
+"aBy-QB-obg.title" = "Calculeter";
+
+/* Class = "IBUILabel"; text = "Bill Total (Post-tax)"; ObjectID = "hpt-5d-fGf"; */
+"hpt-5d-fGf.text" = "Bill Total (Post-tax)";
