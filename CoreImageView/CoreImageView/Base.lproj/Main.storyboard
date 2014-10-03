@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CoreImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDV-NG-F9Z">
+                                <rect key="frame" x="146" y="20" width="280" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDV-NG-F9Z" secondAttribute="height" multiplier="8:5" id="0hA-YR-i9Y"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-RT-uA2">
+                                <rect key="frame" x="227" y="315" width="118" height="31"/>
+                                <connections>
+                                    <action selector="mountSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="3d7-n2-hWD"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkf-1c-p1b">
+                                <rect key="frame" x="366" y="404" width="89" height="30"/>
+                                <state key="normal" title="Photo Album">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="photo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hHh-0h-bWq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9m-Pk-uqq">
+                                <rect key="frame" x="105" y="401" width="101" height="36"/>
+                                <state key="normal" title="Save to Album">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xhF-gq-5bJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eDV-NG-F9Z" secondAttribute="centerX" id="W8l-eD-X7p"/>
+                            <constraint firstAttribute="width" secondItem="eDV-NG-F9Z" secondAttribute="width" id="rIT-Bb-Q4I"/>
+                            <constraint firstItem="eDV-NG-F9Z" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="rej-zp-apB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Slider" destination="kGt-RT-uA2" id="HT7-aL-lJC"/>
+                        <outlet property="UIImageView" destination="eDV-NG-F9Z" id="jAI-lg-wtf"/>
+                        <outlet property="uIImageView" destination="eDV-NG-F9Z" id="w1e-D2-2Ta"/>
+                        <outlet property="uISlider" destination="kGt-RT-uA2" id="8Mu-Hg-JjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
