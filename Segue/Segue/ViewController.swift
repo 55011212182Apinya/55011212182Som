@@ -8,34 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    var ColorString=""
-    
-   
-    @IBOutlet weak var unknowlabel: UILabel!
-
-    @IBOutlet weak var Colorlabel: UILabel!
-    
-    @IBAction func savecolor(sender: UIBarButtonItem) {
-        
-    }
-    
-    @IBAction func Colorselectionbutton(sender: UIButton) {
-        
-        
-    }
+class ViewController: UIViewController,color_two_ViewControllerDelegate {
+    @IBOutlet weak var colorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    
+    func myVCDidfinish(controller: color_two_ViewController, text: String) {
+        colorLabel.text = "Co: "+ text
+        controller.navigationController?.popToRootViewControllerAnimated(true)
     }
-
-
 }
+   
+
 

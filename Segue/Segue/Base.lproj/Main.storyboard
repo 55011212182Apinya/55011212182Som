@@ -25,7 +25,7 @@
         <!--View Controller-->
         <scene sceneID="Jv4-a6-sjh">
             <objects>
-                <viewController id="dfi-v3-LrA" customClass="ViewController" customModule="Segue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dfi-v3-LrA" customClass="ViewController" customModule="Segue" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AqZ-I4-ilg"/>
                         <viewControllerLayoutGuide type="bottom" id="LSY-O3-UCC"/>
@@ -37,10 +37,10 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiA-xI-pvZ">
                                 <rect key="frame" x="68" y="64" width="447" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="4ih-FF-Als">
+                                    <navigationItem title="One" id="4ih-FF-Als">
                                         <barButtonItem key="rightBarButtonItem" title="Color" id="Lvg-wF-iCz">
                                             <connections>
-                                                <segue destination="WmN-9v-UPU" kind="show" identifier="my Segue" id="9vr-h1-J8e"/>
+                                                <segue destination="WmN-9v-UPU" kind="show" identifier="mySegue" id="9vr-h1-J8e"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -59,37 +59,40 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80422160980000001" blue="0.84445841479999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mYI-QM-aEP"/>
                     <connections>
+                        <outlet property="ColorLabel" destination="0UM-Qq-0jn" id="dYw-nr-gyU"/>
+                        <outlet property="colorLabel" destination="0UM-Qq-0jn" id="EfC-vE-5iL"/>
                         <outlet property="lable" destination="0UM-Qq-0jn" id="mWo-fx-MrQ"/>
                         <outlet property="unknowlabel" destination="0UM-Qq-0jn" id="XR2-Oe-iUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJ7-lH-5kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="82"/>
+            <point key="canvasLocation" x="651" y="-520"/>
         </scene>
-        <!--View Controller-->
+        <!--Color two View Controller-->
         <scene sceneID="570-cg-nLo">
             <objects>
-                <viewController id="WmN-9v-UPU" customClass="ViewController" customModule="Segue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WmN-9v-UPU" customClass="color_two_ViewController" customModule="Segue" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpa-EB-5uX"/>
                         <viewControllerLayoutGuide type="bottom" id="dIn-LC-pd1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fy1-VU-wgj">
+                    <view key="view" contentMode="scaleToFill" id="fy1-VU-wgj" colorLabel="IBBuiltInLabel-Red">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w64-Ha-dM8">
                                 <rect key="frame" x="16" y="64" width="571" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="Title" id="4yP-7p-43p">
+                                    <navigationItem title="Two" id="4yP-7p-43p">
                                         <barButtonItem key="leftBarButtonItem" title="Save" id="Jmq-mt-tDi">
                                             <connections>
-                                                <action selector="savecolor:" destination="WmN-9v-UPU" id="p6x-nu-UG9"/>
+                                                <action selector="saveColor:" destination="WmN-9v-UPU" id="rhy-zG-pTZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -100,51 +103,57 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1u-KL-lD3">
                                 <rect key="frame" x="122" y="190" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.69814972566158418" blue="0.28907954803139835" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Red">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="178" width="30" height="30"/>
+                                    <rect key="frame" x="74" y="178" width="47" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="fj2-5O-1hC"/>
+                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="OoI-US-QNN"/>
+                                    <action selector="colorSelectionButton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="Ba8-QK-Vm8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9E-i0-T0p">
                                 <rect key="frame" x="178" y="190" width="42" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.69814972566158418" blue="0.28907954803139835" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Green">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="178" width="42" height="30"/>
+                                    <rect key="frame" x="170" y="178" width="51" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="b02-zT-18y"/>
+                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="7Hm-9a-j6t"/>
+                                    <action selector="colorSelectionButton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="tkP-gA-brM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-in-SW7">
                                 <rect key="frame" x="245" y="190" width="31" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.69814972566158418" blue="0.28907954803139835" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Blue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="267" y="178" width="31" height="30"/>
+                                    <rect key="frame" x="262" y="178" width="49" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="KYr-HP-a6z"/>
+                                    <action selector="Colorselectionbutton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="f6q-vA-AjY"/>
+                                    <action selector="colorSelectionButton:" destination="WmN-9v-UPU" eventType="touchUpInside" id="ci5-U0-RMh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFs-BF-0Ej">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFs-BF-0Ej" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="119" width="42" height="21"/>
+                                    <rect key="frame" x="179" y="124" width="33" height="26"/>
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.91024428489999998" green="0.89271014370000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gFs-BF-0Ej"/>
@@ -156,13 +165,19 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="ptx-jO-Hub"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ColorLabel" destination="gFs-BF-0Ej" id="7uh-mF-5XT"/>
                         <outlet property="Colorlabel" destination="gFs-BF-0Ej" id="4D3-w9-CAx"/>
+                        <outlet property="titleLabel" destination="gFs-BF-0Ej" id="6Kh-9i-gIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eph-em-5e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1623" y="-171"/>
+            <point key="canvasLocation" x="945" y="223"/>
         </scene>
     </scenes>
 </document>
