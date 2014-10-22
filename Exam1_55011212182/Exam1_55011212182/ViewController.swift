@@ -19,7 +19,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var total: UITextField!
     
     @IBAction func totalBT(sender: AnyObject) {
-        
+       
         
     }
     
