@@ -1,15 +1,15 @@
 //
 //  AppDelegate.swift
-//  Segue
+//  ShowIdname
 //
-//  Created by student on 10/17/14.
+//  Created by student on 10/24/14.
 //  Copyright (c) 2014 student. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder,UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

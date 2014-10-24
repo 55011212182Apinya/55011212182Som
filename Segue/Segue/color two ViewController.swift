@@ -16,19 +16,33 @@ class color_two_ViewController: UIViewController {
     var delegate:color_two_ViewControllerDelegate? = nil
     
     var colorString = ""
+
+    @IBOutlet weak var colorLabel: UILabel!
     
-    @IBOutlet weak var titleLabel: UILabel!
     
-    @IBAction func colorSelectionButton(sender: AnyObject) {
-        color_two_ViewController.text = sender.titleLabel!.text!
+    @IBAction func colorSelectionButton(sender: UIButton) {
+        colorLabel.text = sender.titleLabel!.text!
         
+        if (sender.titleLabel!.text! == "Red"){
+            colorLabel.backgroundColor = UIColor.redColor()
+            view.backgroundColor = UIColor.redColor()
+        }
+        else if (sender.titleLabel!.text! == "Green"){
+            colorLabel.backgroundColor = UIColor.greenColor()
+            view.backgroundColor = UIColor.greenColor()
+        }
+        else if (sender.titleLabel!.text! == "Blue"){
+            colorLabel.backgroundColor = UIColor.blueColor()
+            view.backgroundColor = UIColor.blueColor()
+        }
     }
-    
-    @IBAction func saveColor(sender: AnyObject) {
-        if (delegate != nil)
-        delegate!.myVCDidfinish(self ,text: colorLable!.text!)
+   
+   
+    @IBAction func saveColor(sender: UIBarButtonItem) {
+        if (delegate != nil)  {
+        delegate!.myVCDidfinish(self, text: colorLabel!.text!)
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,color_two_ViewControllerDelegate {
+    
     @IBOutlet weak var colorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -17,10 +18,17 @@ class ViewController: UIViewController,color_two_ViewControllerDelegate {
     }
     
     func myVCDidfinish(controller: color_two_ViewController, text: String) {
-        colorLabel.text = "Co: "+ text
+        colorLabel.text = "Co: " + text
         controller.navigationController?.popToRootViewControllerAnimated(true)
     }
-}
-   
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "mySegue"{
+        let vc = segue.destinationViewController as color_two_ViewController
+            vc.colorString = colorLabel.text!
+            vc.delegate = self
+        }
+    }
+ }
+
 
 
