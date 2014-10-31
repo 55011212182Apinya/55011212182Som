@@ -69,6 +69,19 @@ class ViewController: UIViewController,UITableViewDataSource{
         return cell
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "\"Shopping List\""
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override  func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -89,22 +102,9 @@ class ViewController: UIViewController,UITableViewDataSource{
         }else{
             
             println("Could not fetch \(error), \(error!.userInfo)")
-        
+            
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "\"Shopping List\""
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-    }
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

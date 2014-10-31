@@ -31,16 +31,46 @@
                                     <rect key="frame" x="0.0" y="64" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-mE-Hma">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2w-mE-Hma" id="zsZ-Lo-MHb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-BD-OrW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="13" y="0.0" width="320" height="119"/>
+                                            </variation>
+                                        </tableView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="TIH-BD-OrW"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="TIH-BD-OrW"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                </variation>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eeb-JM-McD"/>
+                                <exclude reference="N2w-mE-Hma"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eeb-JM-McD"/>
+                                <include reference="N2w-mE-Hma"/>
                             </mask>
                         </variation>
                     </view>
@@ -48,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822.5" y="344"/>
+            <point key="canvasLocation" x="1893" y="471"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="Pa8-82-QrV">
@@ -59,6 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0Fy-0N-nx1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WMz-Lf-hSH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9un-rn-UNm">
@@ -165,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDF-LJ-ODH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500.5" y="344"/>
+            <point key="canvasLocation" x="2658" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tEK-q7-A0v">
